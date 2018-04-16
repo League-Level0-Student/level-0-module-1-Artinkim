@@ -1,24 +1,26 @@
-//    Copyright (c) The League of Amazing Programmers 2013-2017
-//    Level 0
-
-
+import javax.swing.JOptionPane;
 
 public class TheRiddler {
 
 	public static void main(String[] args) {
 
-		// 1. Make a variable to hold the score
+		int score = 0;
 
-		// 3. Ask the user a riddle. Here are some ideas: bit.ly/some-riddles
+		String answer = JOptionPane.showInputDialog("Why did the chicken cross the road");
+		if (answer.equals("to get to the other side")) {
+			JOptionPane.showMessageDialog(null, "you got it correct");
+			score += 1;
+		} else {
+			JOptionPane.showMessageDialog(null, "wrong the answer is " + "to get to the other side");
+		}
 
-		// 4. If they got the answer right, pop up "correct!" and increase the score by one
-
-		// 5. Otherwise, say "wrong" and tell them the answer
-
-		// 6. Add some more riddles
-
-		// 2. Make a pop up to show the score.
-		
+		answer = JOptionPane.showInputDialog("What starts with e ends with e, and contains one letter?");
+		if (answer.equals("an envelope")) {
+			JOptionPane.showMessageDialog(null, "you got it correct");
+			score += 1;
+		} else {
+			JOptionPane.showMessageDialog(null, "wrong the answer is " + "an envelope");
+		}
+		JOptionPane.showMessageDialog(null, score);
 	}
 }
-
